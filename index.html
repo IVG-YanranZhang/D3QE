@@ -1,71 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title"
+    content="[ICCV 2025] D³QE: Learning Discrete Distribution Discrepancy-aware Quantization Error for Autoregressive-Generated Image Detection">
+  <meta name="description"
+    content="D³QE is a novel framework for detecting autoregressive-generated images by exploiting the distinctive patterns and frequency bias in the discrete latent codebook, achieving superior accuracy and generalization.">
+  <meta name="keywords"
+    content="Autoregressive Image Detection, Codebook Distribution Bias, Quantization Error, D3QE, ARForensics, ICCV 2025, computer vision, AI, machine learning">
+  <meta name="author"
+    content="Yanran Zhang, Bingyao Yu, Yu Zheng, Wenzhao Zheng, Yueqi Duan, Lei Chen, Jie Zhou, Jiwen Lu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:site_name" content="Tsinghua University">
+  <meta property="og:title"
+    content="D³QE: Learning Discrete Distribution Discrepancy-aware Quantization Error for Autoregressive-Generated Image Detection">
+  <meta property="og:description"
+    content="D³QE is a novel framework for detecting autoregressive-generated images by exploiting the distinctive patterns and frequency bias in the discrete latent codebook, achieving superior accuracy and generalization.">
   <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
   <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="D³QE - Research Preview">
+  <meta property="article:published_time" content="2025-10-01T00:00:00.000Z">
+  <meta property="article:author" content="Yanran Zhang">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="Autoregressive Image Detection">
+  <meta property="article:tag" content="Quantization Error">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
   <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:title"
+    content="D³QE: Learning Discrete Distribution Discrepancy-aware Quantization Error for Autoregressive-Generated Image Detection">
+  <meta name="twitter:description"
+    content="D³QE is a novel framework for detecting autoregressive-generated images by exploiting the distinctive patterns and frequency bias in the discrete latent codebook, achieving superior accuracy and generalization.">
   <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:image:alt" content="D³QE - Research Preview">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
+  <meta name="citation_title"
+    content="D³QE: Learning Discrete Distribution Discrepancy-aware Quantization Error for Autoregressive-Generated Image Detection">
+  <meta name="citation_author" content="Zhang, Yanran">
+  <meta name="citation_author" content="Yu, Bingyao">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="ICCV">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/ftnfczwwqrhcpyzqbbqrfxbrdnpzcwyg.pdf">
+
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
@@ -73,77 +63,81 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
+  <title>D³QE - Yanran Zhang, Bingyao Yu et al. | Academic Research</title>
+
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "D³QE: Learning Discrete Distribution Discrepancy-aware Quantization Error for Autoregressive-Generated Image Detection",
+    "description": "D³QE is a novel framework for detecting autoregressive-generated images by exploiting the distinctive patterns and frequency bias in the discrete latent codebook, achieving superior accuracy and generalization.",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
+        "name": "Yanran Zhang",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "Tsinghua University"
         }
       },
       {
         "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
+        "name": "Bingyao Yu",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "Tsinghua University"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yu Zheng",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Tsinghua University"
         }
       }
+      // Add more authors as needed
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2025-10-01",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "ICCV"
     },
     "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
     "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "keywords": ["Autoregressive Image Detection", "Codebook Distribution Bias", "Quantization Error", "D3QE", "ARForensics", "ICCV 2025", "machine learning", "computer vision"],
+    "abstract": "The emergence of visual autoregressive (AR) models has revolutionized image generation while presenting new challenges for synthetic image detection. Unlike previous GAN or diffusion-based methods, AR models generate images through discrete token prediction, exhibiting both marked improvements in image synthesis quality and unique characteristics in their vector-quantized representations. In this paper, we propose to leverage Discrete Distribution Discrepancy-aware Quantization Error (D³QE) for autoregressive-generated image detection that exploits the distinctive patterns and the frequency distribution bias of the codebook existing in real and fake images. We introduce a discrete distribution discrepancy-aware transformer that integrates dynamic codebook frequency statistics into its attention mechanism, fusing semantic features and quantization error latent. To evaluate our method, we construct a comprehensive dataset termed ARForensics covering 7 mainstream visual AR models. Experiments demonstrate superior detection accuracy and strong generalization of D³QE across different AR models, with robustness to real-world perturbations. Code is available at https://github.com/Zhangyr2022/D3QE.",
+    "citation": "@article{Zhang2025D3QE,\n  title={D³QE: Learning Discrete Distribution Discrepancy-aware Quantization Error for Autoregressive-Generated Image Detection},\n  author={Yanran Zhang and Bingyao Yu and Yu Zheng and Wenzhao Zheng and Yueqi Duan and Lei Chen and Jie Zhou and Jiwen Lu},\n  journal={ICCV},\n  year={2025},\n  url={https://YOUR-DOMAIN.com/YOUR-PROJECT-PAGE}\n}",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -153,23 +147,22 @@
     "about": [
       {
         "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Image Forensics"
       },
       {
         "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "name": "Autoregressive Models"
       }
     ]
   }
   </script>
-  
-  <!-- Website/Organization Structured Data -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "name": "Tsinghua University",
+    "url": "https://www.tsinghua.edu.cn/",
     "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
     "sameAs": [
       "https://twitter.com/YOUR_TWITTER_HANDLE",
@@ -178,15 +171,14 @@
   }
   </script>
 </head>
+
 <body>
 
 
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
   <div class="more-works-container">
     <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
       <i class="fas fa-flask"></i>
@@ -201,30 +193,17 @@
         </button>
       </div>
       <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
         <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
           <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
             <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
             <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
             <span class="work-venue">Conference/Journal 2024</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <!-- TODO: Add more related works or remove extra items -->
         <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
           <div class="work-info">
             <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
             <p>Brief description of the work and its main contribution.</p>
             <span class="work-venue">Conference/Journal 2023</span>
           </div>
@@ -235,47 +214,53 @@
   </div>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">D³QE: Learning Discrete Distribution Discrepancy-aware
+                Quantization Error for Autoregressive-Generated Image Detection</h1>
+              <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  <a href="mailto:zhangyr21@mails.tsinghua.edu.cn" target="_blank">Yanran Zhang</a><sup>*</sup>¹,</span>
+                <span class="author-block">
+                  <a href="mailto:yuby@tsinghua.edu.cn" target="_blank">Bingyao Yu</a><sup>*,†</sup>¹,</span>
+                <span class="author-block">
+                  <a href="mailto:yu-zheng@tsinghua.edu.cn" target="_blank">Yu Zheng</a>¹</span>
+                <span class="author-block">
+                  <a href="mailto:wenzhao.zheng@outlook.com" target="_blank">Wenzhao Zheng</a>¹</span>
+                <span class="author-block">
+                  <a href="mailto:duanyueqi@tsinghua.edu.cn" target="_blank">Yueqi Duan</a>²</span>
+                <span class="author-block">
+                  <a href="mailto:leichenthu@tsinghua.edu.cn" target="_blank">Lei Chen</a>¹</span>
+                <span class="author-block">
+                  <a href="mailto:jzhou@tsinghua.edu.cn" target="_blank">Jie Zhou</a>¹</span>
+                <span class="author-block">
+                  <a href="mailto:lujiwen@tsinghua.edu.cn" target="_blank">Jiwen Lu</a><sup>†</sup>¹</span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">¹ Department of Automation, Tsinghua University, China<br>² Department of
+                  Electronic Engineering, Tsinghua University, China<br>ICCV 2025</span>
+                <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution, <sup>†</sup>Corresponding
+                    Author</small></span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="static/pdfs/ftnfczwwqrhcpyzqbbqrfxbrdnpzcwyg.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
                   </span>
-                  </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                  <span class="link-block">
+                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -284,237 +269,421 @@
                     </a>
                   </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <a href="https://github.com/Zhangyr2022/D3QE" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="is-centered">
+            <img src="static/images/d3qe_pipeline_teaser.png" alt="D³QE Pipeline Diagram" loading="lazy" />
+          </div>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+          <h2 class="subtitle has-text-centered">
+            The D³QE pipeline, which leverages Discrete Distribution Discrepancy ($\Delta D$) to guide a Transformer
+            ($\text{D}^3\text{AT}$) processing Quantization Error, fusing it with semantic features for robust
+            AR-generated image detection.
+          </h2>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                [cite_start]The emergence of visual autoregressive (AR) models has revolutionized image generation while
+                presenting new challenges for synthetic image detection[cite: 3]. [cite_start]Unlike previous GAN or
+                diffusion-based methods, AR models generate images through discrete token prediction, exhibiting both
+                marked improvements in image synthesis quality and unique characteristics in their vector-quantized
+                representations[cite: 3]. [cite_start]In this paper, we propose to leverage **Discrete Distribution
+                Discrepancy-aware Quantization Error ($\text{D}^3\text{QE}$)** for autoregressive-generated image
+                detection that exploits the distinctive patterns and the frequency distribution bias of the codebook
+                existing in real and fake images[cite: 3]. [cite_start]We introduce a **discrete distribution
+                discrepancy-aware transformer** that integrates dynamic codebook frequency statistics into its attention
+                mechanism, fusing semantic features and quantization error latent[cite: 3]. [cite_start]To evaluate our
+                method, we construct a comprehensive dataset termed **ARForensics** covering 7 mainstream visual AR
+                models[cite: 3]. [cite_start]Experiments demonstrate superior detection accuracy and strong
+                generalization of $\text{D}^3\text{QE}$ across different AR models, with robustness to real-world
+                perturbations[cite: 3].
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+    </section>
+    <hr>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Introduction & Contributions</h2>
+            <div class="content has-text-justified">
+              <p>
+                [cite_start]The rapid advancement of visual Autoregressive (AR) models has brought new challenges to
+                synthetic image detection[cite: 3]. [cite_start]Unlike traditional generative paradigms (GANs, Diffusion
+                Models), AR models rely on **discrete token prediction**, encoding forgery artifacts not in pixel-level
+                high-frequency noise, but in the **discrete latent space**, rendering conventional detectors
+                ineffective[cite: 1, 3].
+              </p>
+              <p>
+                [cite_start]Our core finding reveals a stark **Discrete Distribution Discrepancy
+                ($\text{D}^3\text{D}$)** between real and AR-generated images[cite: 1, 3]. [cite_start]Real data
+                exhibits a **long-tail token distribution**, meaning tokens are used diversely, while fake samples show
+                probability mass concentrated in the high-frequency token regions, indicating a polarized or unbalanced
+                codebook usage[cite: 1, 3].
+              </p>
+              <h4 class="title is-5">Our Main Contributions:</h4>
+              <ul>
+                [cite_start]<li>**$\text{D}^3\text{QE}$ Framework:** We propose $\text{D}^3\text{QE}$, a novel framework
+                  that systematically analyzes and leverages both the **codebook distribution bias** and the
+                  **quantization error** inherent in the AR generation process[cite: 1, 3].</li>
+                <li>**$\text{D}^3\text{AT}$ Transformer:** We introduce a specialized transformer module with a
+                  **Discrepancy-Aware Self-Attention ($\text{D}^3\text{ASA}$)** mechanism. [cite_start]This mechanism
+                  integrates dynamic codebook frequency statistics ($\Delta D$) to effectively merge the quantization
+                  error latent with robust semantic features, leading to strong detection capability[cite: 1, 3].</li>
+                [cite_start]<li>**ARForensics Benchmark:** We establish the first comprehensive, large-scale benchmark
+                  dataset, **ARForensics**, for AR-generated image detection, covering **7 mainstream visual AR models**
+                  to rigorously test generalization and robustness[cite: 1, 3].</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+    </section>
+    <hr>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Methodology: The D³QE Pipeline</h2>
+            <div class="content has-text-justified">
+              <p>
+                [cite_start]The $\text{D}^3\text{QE}$ framework detects AR-generated images by combining local
+                discrete-level artifacts with global semantic information[cite: 3]. [cite_start]The architecture
+                consists of a **Quantization Error Representation Module**, a **Discrete Distribution Discrepancy-Aware
+                Transformer ($\text{D}^3\text{AT}$)**, and a **Semantic Feature Embedding Module**[cite: 3].
+              </p>
+
+              <h4 class="title is-5">Key Components:</h4>
+              <ol>
+                <li>**Quantization Error Representation:** A frozen **VQVAE Encoder** extracts the continuous latent map
+                  ($z$). [cite_start]This map is quantized using a learnable codebook to obtain the discrete
+                  representation ($z_q$)[cite: 3]. [cite_start]The quantization error between $z$ and $z_q$ is extracted
+                  as a core local artifact of the AR generation process[cite: 3].</li>
+                [cite_start]<li>**Discrete Distribution Statistics Module:** This module computes the **discrete
+                  distribution discrepancy ($\Delta D$)** by analyzing the token usage statistics between real and fake
+                  images in the codebook space[cite: 3]. [cite_start]This discrepancy captures the unique statistical
+                  signatures introduced by the finite codebook capacity[cite: 3]. </li>
+                <li>**$\text{D}^3\text{AT}$ (Discrete Distribution Discrepancy-Aware Transformer):** This stacked
+                  transformer processes the quantization error latent. [cite_start]Its core is the **Discrepancy-Aware
+                  Self-Attention ($\text{D}^3\text{ASA}$)** module, which explicitly incorporates the global codebook
+                  usage statistics ($\Delta D$) to guide the attention mechanism for more robust feature extraction, as
+                  shown in the diagram[cite: 1]. </li>
+                [cite_start]<li>**Semantic Feature Fusion:** A frozen **CLIP backbone** extracts robust, high-level
+                  semantic features in parallel[cite: 3]. [cite_start]A Feature Alignment module processes these
+                  features and fuses them with the local discrete features from the $\text{D}^3\text{AT}$ stack for the
+                  final binary classification[cite: 3].</li>
+              </ol>
+            </div>
+
+            <h4 class="title is-5 mt-5">Dataset Visualization (ARForensics)</h4>
+            <div class="content has-text-centered">
+              <p>
+                The **ARForensics** dataset contains samples from 7 mainstream AR models (LlamaGen, VAR, Infinity,
+                Janus-Pro, RAR, Switti, Open-MAGVIT2), providing a robust benchmark and showcasing the stark visual
+                differences between models.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
 
 
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Dataset Visualization</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img src="static/images/ar_forensics_real_vs_fake.jpg" alt="Visualization of ARForensics Dataset Samples"
+                loading="lazy" />
+              <h2 class="subtitle has-text-centered">
+                A selection of real and generated images from the ARForensics dataset, covering 7 mainstream AR models.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/token_distribution_bias.jpg" alt="Token Distribution Bias Visualization"
+                loading="lazy" />
+              <h2 class="subtitle has-text-centered">
+                Figure 1: Token Distribution Bias. Real data shows a long-tail distribution, while fakes show
+                concentrated high-frequency token usage, which is key to D³QE.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/codebook_activation_difference.jpg" alt="Codebook Activation Difference Heatmaps"
+                loading="lazy" />
+              <h2 class="subtitle has-text-centered">
+                Figure 2: Codebook Activation Difference Heatmaps. Real samples (a) show a balanced codebook usage,
+                while fakes (b) reveal polarized hotspots, highlighting the core artifact for detection.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/d3qe_performance_graph.jpg" alt="D³QE Performance Comparison Graph"
+                loading="lazy" />
+              <h2 class="subtitle has-text-centered">
+                Performance comparison showing D³QE's superior mean Average Precision (A.P.) over state-of-the-art
+                methods.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Experiments</h2>
+            <div class="content has-text-justified">
+              <p>
+                We evaluate $\text{D}^3\text{QE}$ extensively on our proposed **ARForensics** benchmark, demonstrating
+                its superior performance in both intra-model testing and cross-model generalization.
+              </p>
+
+              <h4 class="title is-5">Table 1: Intra-Model Detection Performance (Accuracy / A.P.)</h4>
+              <p>
+                This table summarizes the performance of various methods when trained and tested on the same model from
+                the ARForensics dataset. **$\text{D}^3\text{QE}$ demonstrates superior overall performance (Mean Acc. /
+                A.P.)** by effectively leveraging the discrete distribution artifacts.
+              </p>
+
+              <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>LlamaGen<br>Acc. / A.P.</th>
+                    <th>VAR<br>Acc. / A.P.</th>
+                    <th>Infinity<br>Acc. / A.P.</th>
+                    <th>Janus-Pro<br>Acc. / A.P.</th>
+                    <th>RAR<br>Acc. / A.P.</th>
+                    <th>Switti<br>Acc. / A.P.</th>
+                    <th>Open-MAGVIT2<br>Acc. / A.P.</th>
+                    <th>Mean<br>Acc. / A.P.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CNNSpot [55]</td>
+                    <td>99.94 / 99.94</td>
+                    <td>50.26 / 70.53</td>
+                    <td>50.87 / 78.06</td>
+                    <td>95.70 / 99.95</td>
+                    <td>50.80 / 61.67</td>
+                    <td>93.91 / 56.58</td>
+                    <td>50.12 / 57.39</td>
+                    <td>64.90 / 80.21</td>
+                  </tr>
+                  <tr>
+                    <td>FreDect [11]</td>
+                    <td>99.80 / 100.00</td>
+                    <td>52.88 / 88.18</td>
+                    <td>50.17 / 60.13</td>
+                    <td>88.94 / 99.54</td>
+                    <td>52.52 / 83.31</td>
+                    <td>59.01 / 50.04</td>
+                    <td>57.09 / 86.53</td>
+                    <td>64.49 / 82.39</td>
+                  </tr>
+                  <tr>
+                    <td>Gram-Net [25]</td>
+                    <td>99.57 / 99.98</td>
+                    <td>55.04 / 84.57</td>
+                    <td>52.38 / 76.80</td>
+                    <td>74.48 / 97.33</td>
+                    <td>49.95 / 52.72</td>
+                    <td>57.74 / 88.66</td>
+                    <td>53.72 / 50.08</td>
+                    <td>62.75 / 79.11</td>
+                  </tr>
+                  <tr>
+                    <td>LNP [23]</td>
+                    <td>99.48 / 99.99</td>
+                    <td>49.64 / 55.42</td>
+                    <td>49.76 / 49.94</td>
+                    <td>99.53 / 99.98</td>
+                    <td>49.69 / 55.61</td>
+                    <td>70.28 / 95.83</td>
+                    <td>54.67 / 76.81</td>
+                    <td>67.58 / 82.74</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="title is-5">Table 2: Cross-Model Generalization</h4>
+              <p>
+                This table presents the results of cross-model testing, where the model is trained on one AR model
+                (e.g., LlamaGen) and tested on an unseen model (e.g., VAR). $\text{D}^3\text{QE}$ demonstrates
+                exceptional generalization ability, significantly outperforming competitors, confirming that the
+                extracted discrete distribution discrepancy is a general artifact of AR models. **(Full table in the
+                paper)**
+              </p>
+
+              <h4 class="title is-5">Table 3: Robustness to Post-Processing Perturbations</h4>
+              <p>
+                This table evaluates the model's robustness under common real-world corruptions, such as JPEG
+                compression and Gaussian blurring. $\text{D}^3\text{QE}$ maintains high detection accuracy across all
+                perturbation levels, validating its resilience against image manipulation, which is critical for
+                practical applications. **(Full table in the paper)**
+              </p>
+
+              <h4 class="title is-5">Table 4: Ablation Study on D³QE Components</h4>
+              <p>
+                The ablation study confirms the contribution of each proposed module: the Quantization Error feature,
+                the Distribution Discrepancy ($\Delta D$) feature, and the $\text{D}^3\text{ASA}$ mechanism. Results
+                show that combining both $\Delta D$ and the Quantization Error via the $\text{D}^3\text{ASA}$ module
+                yields the best performance, validating our core design principles. **(Full table in the paper)**
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
 
 
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Video Presentation</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+
+              <div class="publication-video">
+                <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Additional Results/Demos</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/carousel1.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">Visualization of feature maps across different layers.</h2>
+            </div>
+            <div class="item item-video2">
+              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/carousel2.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">Demonstration of detection on images with post-processing.</h2>
+            </div>
+            <div class="item item-video3">
+              <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/carousel3.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">Comparison of D³QE vs. baselines on challenging samples.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
 
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Poster</h2>
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          <iframe src="static/pdfs/iccv25_poster_template.pdf" width="100%" height="550">
           </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
 
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
+    <hr>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@article{Zhang2025D3QE,
+  title={D³QE: Learning Discrete Distribution Discrepancy-aware Quantization Error for Autoregressive-Generated Image Detection},
+  author={Yanran Zhang and Bingyao Yu and Yu Zheng and Wenzhao Zheng and Yueqi Duan and Lei Chen and Jie Zhou and Jiwen Lu},
+  journal={ICCV},
+  year={2025},
+  url={https://YOUR-DOMAIN.com/YOUR-PROJECT-PAGE},
+  code={https://github.com/Zhangyr2022/D3QE}
+}</code></pre>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
 
-  </body>
-  </html>
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                You are free to borrow the source code of this website, we just ask that you link back to this page in
+                the footer. <br> This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>
