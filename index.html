@@ -253,16 +253,6 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
                     <a href="https://github.com/Zhangyr2022/D3QE" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -273,7 +263,7 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    <a href="http://arxiv.org/abs/2510.05891" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="ai ai-arxiv"></i>
@@ -300,11 +290,11 @@
           <div class="columns is-centered is-vcentered">
             <div class="column is-half has-text-centered">
               <img src="static/images/d3qe_teaser.png" alt="D³QE Pipeline Diagram" loading="lazy"
-                style="width: 90%; display: inline-block;">
+                style="width: 80%; display: inline-block;">
             </div>
             <div class="column is-half has-text-centered">
               <img src="static/images/d3qe_vis.png" alt="Codebook Activation Difference Visualization" loading="lazy"
-                style="width: 90%; display: inline-block;">
+                style="width: 95%; display: inline-block;">
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
@@ -321,7 +311,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
+            <h2 class="title is-3 has-text-centered">Abstract</h2>
             <div class="content has-text-justified">
               <p>
                 The emergence of visual autoregressive (AR) models has revolutionized image generation while
@@ -349,7 +339,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Introduction</h2>
+            <h2 class="title is-3 has-text-centered">Introduction</h2>
             <img src="static/images/d3qe_pipe.png" alt="D3QE Pipeline" loading="lazy" />
 
             <div class="content has-text-justified">
@@ -357,7 +347,7 @@
                 Autoregressive (AR) models introduce new detection challenges: forgery artifacts are encoded in the
                 <b>discrete latent space</b> (via <b>discrete token prediction</b>), not in typical pixel noise,
                 rendering conventional detectors ineffective. Our key insight is the stark <b>Discrete Distribution
-                  Discrepancy</b> (D³D) between real and AR-generated images. Real data exhibits a <b>long-tail token
+                  Discrepancy</b> between real and AR-generated images. Real data exhibits a <b>long-tail token
                   distribution</b>, while fake images show probability mass concentrated in high-frequency regions,
                 indicating polarized codebook usage.
               </p>
@@ -368,8 +358,8 @@
                   both the <b>codebook distribution bias</b> and the <b>quantization error</b> inherent in the AR
                   generation process.</li>
                 <li><b>D³AT Transformer:</b> We introduce a specialized transformer with <b>Discrepancy-Aware
-                    Self-Attention</b> (D³ASA). This mechanism integrates dynamic codebook frequency statistics ($\Delta
-                  D$) to effectively fuse the quantization error latent with robust semantic features.</li>
+                    Self-Attention</b> (D³ASA). This mechanism integrates dynamic codebook frequency statistics (ΔD) to
+                  effectively fuse the quantization error latent with robust semantic features.</li>
                 <li><b>ARForensics Benchmark:</b> We establish the first comprehensive dataset, <b>ARForensics</b>, for
                   AR-generated image detection, covering <b>7 mainstream visual AR models</b> to rigorously test
                   generalization and robustness.</li>
@@ -385,7 +375,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Methodology: The D³QE Pipeline</h2>
+            <h2 class="title is-3 has-text-centered">Methodology: The D³QE Pipeline</h2>
             <div class="content has-text-justified">
               <p>
                 The D³QE framework fuses local discrete artifacts with global semantic features through four key
@@ -414,7 +404,7 @@
     <section class="hero is-small">
       <div class="hero-body">
         <div class="container">
-          <h2 class="title is-3">Dataset Visualization</h2>
+          <h2 class="title is-3 has-text-centered">Dataset Visualization</h2>
           <div class="content has-text-centered">
             <p>
               The <b>ARForensics</b> dataset contains samples from 7 mainstream AR models ( <b>LlamaGen, VAR,
@@ -439,7 +429,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Experiments</h2>
+            <h2 class="title is-3 has-text-centered">Experiments</h2>
             <div class="content has-text-justified">
               <p>
                 We evaluate D³QE extensively on our proposed <b>ARForensics</b> benchmark, demonstrating
@@ -499,9 +489,10 @@
   author={Yanran Zhang and Bingyao Yu and Yu Zheng and Wenzhao Zheng and Yueqi Duan and Lei Chen and Jie Zhou and Jiwen Lu},
   journal={ICCV},
   year={2025},
-  url={https://YOUR-DOMAIN.com/YOUR-PROJECT-PAGE},
-  code={https://github.com/Zhangyr2022/D3QE}
-}</code></pre>
+  <!-- url={https://YOUR-DOMAIN.com/YOUR-PROJECT-PAGE},
+  code={https://github.com/Zhangyr2022/D3QE} -->
+}
+</code></pre>
       </div>
     </section>
     <footer class="footer">
