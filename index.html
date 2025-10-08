@@ -308,9 +308,11 @@
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            The D³QE pipeline, which leverages Discrete Distribution Discrepancy to guide a Transformer
-            (</b>D³AT</b>) processing Quantization Error, fusing it with semantic features for robust
-            AR-generated image detection.
+            Our key insight is the stark distribution discrepancy in the discrete latent space of autoregressive(AR)
+            models.
+            Token distribution plots reveal the long-tail token usage in real data versus the concentrated,
+            high-frequency bias in fakes. This is confirmed by codebook activation heatmaps, which show a balanced
+            pattern for real images but polarized hotspots for fakes—the core artifact for our detection method.
           </h2>
         </div>
       </div>
@@ -392,7 +394,7 @@
 
               <ol>
                 <li><b>Quantization Error Representation:</b> A frozen <b>VQVAE Encoder</b> extracts the error between
-                  the continuous latent map ($z$) and its discrete representation ($z_q$).</li>
+                  the continuous latent map z and its discrete representation z_q.</li>
                 <li><b>Discrete Distribution Statistics:</b> Computes the <b>discrete distribution discrepancy</b> (ΔD)
                   from real vs. fake token usage statistics.</li>
                 <li><b>D³AT Transformer:</b> Its core <b>Discrepancy-Aware Self-Attention</b> (D³ASA) module processes
@@ -415,15 +417,16 @@
           <h2 class="title is-3">Dataset Visualization</h2>
           <div class="content has-text-centered">
             <p>
-              The <b>ARForensics</b> dataset contains samples from 7 mainstream AR models (LlamaGen, VAR, Infinity,
-              Janus-Pro, RAR, Switti, Open-MAGVIT2), serving as a robust visual benchmark for generalization testing.
+              The <b>ARForensics</b> dataset contains samples from 7 mainstream AR models ( <b>LlamaGen, VAR,
+                Infinity,
+                Janus-Pro, RAR, Switti, Open-MAGVIT2</b>), serving as a robust visual benchmark for testing the
+              generalization of ai-generated image detection models.
             </p>
           </div>
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
               <div class="publication-video">
-                <iframe src="static/videos/data.mp4" frameborder="0" allow="autoplay; encrypted-media"
-                  allowfullscreen></iframe>
+                <iframe src="static/videos/data.mp4" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
               </div>
             </div>
           </div>
