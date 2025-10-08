@@ -187,25 +187,18 @@
     </button>
     <div class="more-works-dropdown" id="moreWorksDropdown">
       <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
+        <h4>More Works from Yanran Zhang</h4>
         <button class="close-btn" onclick="toggleMoreWorks()">
           <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="works-list">
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
+        <a href="https://ivg-yanranzhang.github.io/UniPre3D/" class="work-item" target="_blank">
           <div class="work-info">
-            <h5>Paper Title 1</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+            <h5>UniPre3D: Unified Pre-training of 3D Point Cloud Models with Cross-Modal Gaussian Splatting</h5>
+            <p>UniPre3D is the first unified pre-training method for 3D point clouds that effectively handles both
+              object- and scene-level data through cross-modal Gaussian splatting.</p>
+            <span class="work-venue">CVPR 2025</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
@@ -319,20 +312,20 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                [cite_start]The emergence of visual autoregressive (AR) models has revolutionized image generation while
-                presenting new challenges for synthetic image detection[cite: 3]. [cite_start]Unlike previous GAN or
+                The emergence of visual autoregressive (AR) models has revolutionized image generation while
+                presenting new challenges for synthetic image detection. Unlike previous GAN or
                 diffusion-based methods, AR models generate images through discrete token prediction, exhibiting both
                 marked improvements in image synthesis quality and unique characteristics in their vector-quantized
-                representations[cite: 3]. [cite_start]In this paper, we propose to leverage **Discrete Distribution
-                Discrepancy-aware Quantization Error ($\text{D}^3\text{QE}$)** for autoregressive-generated image
+                representations. In this paper, we propose to leverage <b>Discrete Distribution
+                  Discrepancy-aware Quantization Error</b> <b>D³QE</b> for autoregressive-generated image
                 detection that exploits the distinctive patterns and the frequency distribution bias of the codebook
-                existing in real and fake images[cite: 3]. [cite_start]We introduce a **discrete distribution
-                discrepancy-aware transformer** that integrates dynamic codebook frequency statistics into its attention
-                mechanism, fusing semantic features and quantization error latent[cite: 3]. [cite_start]To evaluate our
-                method, we construct a comprehensive dataset termed **ARForensics** covering 7 mainstream visual AR
-                models[cite: 3]. [cite_start]Experiments demonstrate superior detection accuracy and strong
-                generalization of $\text{D}^3\text{QE}$ across different AR models, with robustness to real-world
-                perturbations[cite: 3].
+                existing in real and fake images. We introduce a <b>discrete distribution
+                  discrepancy-aware transformer</b> that integrates dynamic codebook frequency statistics into its
+                attention mechanism, fusing semantic features and quantization error latent. To evaluate our
+                method, we construct a comprehensive dataset termed <b>ARForensics</b> covering 7 mainstream visual AR
+                models. Experiments demonstrate superior detection accuracy and strong
+                generalization of D³QE across different AR models, with robustness to real-world
+                perturbations.
               </p>
             </div>
           </div>
@@ -347,31 +340,31 @@
             <h2 class="title is-3">Introduction & Contributions</h2>
             <div class="content has-text-justified">
               <p>
-                [cite_start]The rapid advancement of visual Autoregressive (AR) models has brought new challenges to
-                synthetic image detection[cite: 3]. [cite_start]Unlike traditional generative paradigms (GANs, Diffusion
+                The rapid advancement of visual Autoregressive (AR) models has brought new challenges to
+                synthetic image detection. Unlike traditional generative paradigms (GANs, Diffusion
                 Models), AR models rely on **discrete token prediction**, encoding forgery artifacts not in pixel-level
                 high-frequency noise, but in the **discrete latent space**, rendering conventional detectors
-                ineffective[cite: 1, 3].
+                ineffective.
               </p>
               <p>
-                [cite_start]Our core finding reveals a stark **Discrete Distribution Discrepancy
-                ($\text{D}^3\text{D}$)** between real and AR-generated images[cite: 1, 3]. [cite_start]Real data
+                Our core finding reveals a stark **Discrete Distribution Discrepancy
+                ($\text{D}^3\text{D}$)** between real and AR-generated images. Real data
                 exhibits a **long-tail token distribution**, meaning tokens are used diversely, while fake samples show
                 probability mass concentrated in the high-frequency token regions, indicating a polarized or unbalanced
-                codebook usage[cite: 1, 3].
+                codebook usage.
               </p>
               <h4 class="title is-5">Our Main Contributions:</h4>
               <ul>
-                [cite_start]<li>**$\text{D}^3\text{QE}$ Framework:** We propose $\text{D}^3\text{QE}$, a novel framework
+                <li>**$\text{D}^3\text{QE}$ Framework:** We propose $\text{D}^3\text{QE}$, a novel framework
                   that systematically analyzes and leverages both the **codebook distribution bias** and the
-                  **quantization error** inherent in the AR generation process[cite: 1, 3].</li>
+                  **quantization error** inherent in the AR generation process.</li>
                 <li>**$\text{D}^3\text{AT}$ Transformer:** We introduce a specialized transformer module with a
-                  **Discrepancy-Aware Self-Attention ($\text{D}^3\text{ASA}$)** mechanism. [cite_start]This mechanism
+                  **Discrepancy-Aware Self-Attention ($\text{D}^3\text{ASA}$)** mechanism. This mechanism
                   integrates dynamic codebook frequency statistics ($\Delta D$) to effectively merge the quantization
-                  error latent with robust semantic features, leading to strong detection capability[cite: 1, 3].</li>
-                [cite_start]<li>**ARForensics Benchmark:** We establish the first comprehensive, large-scale benchmark
+                  error latent with robust semantic features, leading to strong detection capability.</li>
+                <li>**ARForensics Benchmark:** We establish the first comprehensive, large-scale benchmark
                   dataset, **ARForensics**, for AR-generated image detection, covering **7 mainstream visual AR models**
-                  to rigorously test generalization and robustness[cite: 1, 3].</li>
+                  to rigorously test generalization and robustness.</li>
               </ul>
             </div>
           </div>
@@ -387,31 +380,31 @@
             <h2 class="title is-3">Methodology: The D³QE Pipeline</h2>
             <div class="content has-text-justified">
               <p>
-                [cite_start]The $\text{D}^3\text{QE}$ framework detects AR-generated images by combining local
-                discrete-level artifacts with global semantic information[cite: 3]. [cite_start]The architecture
+                The $\text{D}^3\text{QE}$ framework detects AR-generated images by combining local
+                discrete-level artifacts with global semantic information. The architecture
                 consists of a **Quantization Error Representation Module**, a **Discrete Distribution Discrepancy-Aware
-                Transformer ($\text{D}^3\text{AT}$)**, and a **Semantic Feature Embedding Module**[cite: 3].
+                Transformer ($\text{D}^3\text{AT}$)**, and a **Semantic Feature Embedding Module**.
               </p>
 
               <h4 class="title is-5">Key Components:</h4>
               <ol>
                 <li>**Quantization Error Representation:** A frozen **VQVAE Encoder** extracts the continuous latent map
-                  ($z$). [cite_start]This map is quantized using a learnable codebook to obtain the discrete
-                  representation ($z_q$)[cite: 3]. [cite_start]The quantization error between $z$ and $z_q$ is extracted
-                  as a core local artifact of the AR generation process[cite: 3].</li>
-                [cite_start]<li>**Discrete Distribution Statistics Module:** This module computes the **discrete
+                  ($z$). This map is quantized using a learnable codebook to obtain the discrete
+                  representation ($z_q$). The quantization error between $z$ and $z_q$ is extracted
+                  as a core local artifact of the AR generation process.</li>
+                <li>**Discrete Distribution Statistics Module:** This module computes the **discrete
                   distribution discrepancy ($\Delta D$)** by analyzing the token usage statistics between real and fake
-                  images in the codebook space[cite: 3]. [cite_start]This discrepancy captures the unique statistical
-                  signatures introduced by the finite codebook capacity[cite: 3]. </li>
+                  images in the codebook space. This discrepancy captures the unique statistical
+                  signatures introduced by the finite codebook capacity. </li>
                 <li>**$\text{D}^3\text{AT}$ (Discrete Distribution Discrepancy-Aware Transformer):** This stacked
-                  transformer processes the quantization error latent. [cite_start]Its core is the **Discrepancy-Aware
+                  transformer processes the quantization error latent. Its core is the **Discrepancy-Aware
                   Self-Attention ($\text{D}^3\text{ASA}$)** module, which explicitly incorporates the global codebook
                   usage statistics ($\Delta D$) to guide the attention mechanism for more robust feature extraction, as
                   shown in the diagram[cite: 1]. </li>
-                [cite_start]<li>**Semantic Feature Fusion:** A frozen **CLIP backbone** extracts robust, high-level
-                  semantic features in parallel[cite: 3]. [cite_start]A Feature Alignment module processes these
+                <li>**Semantic Feature Fusion:** A frozen **CLIP backbone** extracts robust, high-level
+                  semantic features in parallel. A Feature Alignment module processes these
                   features and fuses them with the local discrete features from the $\text{D}^3\text{AT}$ stack for the
-                  final binary classification[cite: 3].</li>
+                  final binary classification.</li>
               </ol>
             </div>
 
