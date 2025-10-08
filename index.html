@@ -5,7 +5,7 @@
   <style>
     /* 降低所有正文段落的行距 */
     .content p {
-      line-height: 1.2;
+      line-height: 1.4;
       /* 默认值通常在1.5到1.75之间。你可以尝试1.4或更小 */
       margin-bottom: 0.75em;
       /* 可选：适当调整段落间的底边距，防止段落过于拥挤 */
@@ -13,7 +13,7 @@
 
     /* 可选：如果你想更进一步降低列表项的行距 */
     .content ul li {
-      line-height: 1.25;
+      line-height: 1.4;
     }
   </style>
   <meta charset="utf-8">
@@ -354,7 +354,6 @@
         <div class="columns is-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3 has-text-centered">Introduction</h2>
-            <img src="static/images/d3qe_pipe.png" alt="D3QE Pipeline" loading="lazy" />
 
             <div class="content has-text-justified">
               <p>
@@ -389,13 +388,13 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3 has-text-centered">Methodology: The D³QE Pipeline</h2>
+            <h2 class="title is-3 has-text-centered">Methodology</h2>
             <div class="content has-text-justified">
+              <img src="static/images/d3qe_pipe.png" alt="D3QE Pipeline" loading="lazy" />
+
               <p>
                 The D³QE framework fuses local discrete artifacts with global semantic features through four key
                 components:
-              </p>
-
               <ol>
                 <li><b>Quantization Error Representation:</b> A frozen <b>VQVAE Encoder</b> extracts the error between
                   the continuous latent map z and its discrete representation z_q.</li>
@@ -406,6 +405,7 @@
                 <li><b>Semantic Feature Fusion:</b> A frozen <b>CLIP</b> extracts semantic features, which are fused
                   with the D³AT's output for final classification.</li>
               </ol>
+              </p>
             </div>
           </div>
         </div>
