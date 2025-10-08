@@ -357,25 +357,20 @@
 
             <div class="content has-text-justified">
               <p>
-                Autoregressive (AR) models introduce new detection challenges: forgery artifacts are encoded in the
-                <b>discrete latent space</b> (via <b>discrete token prediction</b>), not in typical pixel noise,
-                rendering conventional detectors ineffective. Our key insight is the stark <b>Discrete Distribution
-                  Discrepancy</b> between real and AR-generated images. Real data exhibits a <b>long-tail token
-                  distribution</b>, while fake images show probability mass concentrated in high-frequency regions,
-                indicating polarized codebook usage.
+                Autoregressive (AR) models create forgeries in the <b>discrete latent space</b> via <b>discrete token
+                  prediction</b>, evading conventional detectors. We observe a strong <b>Discrete Distribution
+                  Discrepancy</b>: real images follow a <b>long-tail token distribution</b>, while fakes concentrate
+                probability in high-frequency regions, showing polarized codebook usage.
               </p>
 
               <h4 class="title is-5">Our Main Contributions:</h4>
               <ul>
-                <li><b>D³QE Framework:</b> We propose D³QE, a novel framework that systematically analyzes and leverages
-                  both the <b>codebook distribution bias</b> and the <b>quantization error</b> inherent in the AR
-                  generation process.</li>
-                <li><b>D³AT Transformer:</b> We introduce a specialized transformer with <b>Discrepancy-Aware
-                    Self-Attention</b> (D³ASA). This mechanism integrates dynamic codebook frequency statistics (ΔD) to
-                  effectively fuse the quantization error latent with robust semantic features.</li>
-                <li><b>ARForensics Benchmark:</b> We establish the first comprehensive dataset, <b>ARForensics</b>, for
-                  AR-generated image detection, covering <b>7 mainstream visual AR models</b> to rigorously test
-                  generalization and robustness.</li>
+                <li><b>D³QE Framework:</b> Analyzes the <b>codebook distribution bias</b> and <b>quantization error</b>
+                  from AR generation.</li>
+                <li><b>D³AT Transformer:</b> Features <b>Discrepancy-Aware Self-Attention</b> (D³ASA), integrating
+                  codebook statistics (ΔD) to fuse quantization error with semantic features.</li>
+                <li><b>ARForensics Benchmark:</b> The first dataset for AR-generated image detection, covering <b>7
+                    mainstream models</b> to test generalization.</li>
               </ul>
             </div>
           </div>
@@ -384,6 +379,30 @@
     </section>
     <hr>
 
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3 has-text-centered">Dataset Visualization</h2>
+          <div class="content has-text-centered">
+            <p>
+              The <b>ARForensics</b> dataset contains samples from 7 mainstream AR models ( <b>LlamaGen, VAR,
+                Infinity,
+                Janus-Pro, RAR, Switti, Open-MAGVIT2</b>), serving as a robust visual benchmark for testing the
+              generalization of ai-generated image detection models.
+            </p>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="publication-video">
+                <iframe src="static/videos/data.mp4" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
@@ -412,31 +431,8 @@
       </div>
     </section>
 
-    <hr>
 
 
-    <section class="hero is-small">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3 has-text-centered">Dataset Visualization</h2>
-          <div class="content has-text-centered">
-            <p>
-              The <b>ARForensics</b> dataset contains samples from 7 mainstream AR models ( <b>LlamaGen, VAR,
-                Infinity,
-                Janus-Pro, RAR, Switti, Open-MAGVIT2</b>), serving as a robust visual benchmark for testing the
-              generalization of ai-generated image detection models.
-            </p>
-          </div>
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <div class="publication-video">
-                <iframe src="static/videos/data.mp4" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <hr>
     <section class="section hero is-light">
