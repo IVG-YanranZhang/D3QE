@@ -65,8 +65,8 @@
 
   <title>D³QE - Yanran Zhang, Bingyao Yu et al. | Academic Research</title>
 
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/d3qe.ico">
+  <link rel="apple-touch-icon" href="static/images/d3qe.ico">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -293,11 +293,20 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <div class="is-centered">
+          <!-- <div class="is-centered">
             <img src="static/images/d3qe_teaser.png" alt=" Discrete Distribution Discrepancy " loading="lazy" />
             <img src="static/images/d3qe_vis.png" alt=" Discrete Distribution Discrepancy " loading="lazy" />
+          </div> -->
+          <div class="columns is-centered is-vcentered">
+            <div class="column is-half has-text-centered">
+              <img src="static/images/d3qe_teaser.png" alt="D³QE Pipeline Diagram" loading="lazy"
+                style="width: 90%; display: inline-block;">
+            </div>
+            <div class="column is-half has-text-centered">
+              <img src="static/images/d3qe_vis.png" alt="Codebook Activation Difference Visualization" loading="lazy"
+                style="width: 90%; display: inline-block;">
+            </div>
           </div>
-
           <h2 class="subtitle has-text-centered">
             The D³QE pipeline, which leverages Discrete Distribution Discrepancy to guide a Transformer
             (</b>D³AT</b>) processing Quantization Error, fusing it with semantic features for robust
@@ -377,35 +386,20 @@
             <h2 class="title is-3">Methodology: The D³QE Pipeline</h2>
             <div class="content has-text-justified">
               <p>
-                The D³QE framework detects AR-generated images by fusing local discrete-level artifacts with global
-                semantic information. The architecture consists of a <b>Quantization Error Representation Module</b>, a
-                <b>Discrete Distribution Discrepancy-Aware Transformer</b> (D³AT), and a <b>Semantic Feature Embedding
-                  Module</b>.
+                The D³QE framework fuses local discrete artifacts with global semantic features through four key
+                components:
               </p>
 
-              <h4 class="title is-5">Key Components:</h4>
               <ol>
-                <li><b>Quantization Error Representation:</b> A frozen <b>VQVAE Encoder</b> extracts the continuous
-                  latent map (z). The quantization error between z and its discrete representation (z_q) is
-                  extracted as the core local artifact.</li>
-                <li><b>Discrete Distribution Statistics Module:</b> This module computes the <b>discrete distribution
-                    discrepancy</b> (ΔD) by analyzing the token usage statistics between real and fake images,
-                  capturing unique statistical signatures.</li>
-                <li><b>D³AT (Discrete Distribution Discrepancy-Aware Transformer):</b> This stacked transformer
-                  processes the quantization error. Its core, <b>Discrepancy-Aware Self-Attention</b> (D³ASA), uses
-                  global ΔD to guide the attention mechanism for robust feature extraction.</li>
-                <li><b>Semantic Feature Fusion:</b> A frozen <b>CLIP backbone</b> extracts robust semantic features in
-                  parallel. These features are aligned and fused with the discrete features from the D³AT stack for the
-                  final binary classification.</li>
+                <li><b>Quantization Error Representation:</b> A frozen <b>VQVAE Encoder</b> extracts the error between
+                  the continuous latent map ($z$) and its discrete representation ($z_q$).</li>
+                <li><b>Discrete Distribution Statistics:</b> Computes the <b>discrete distribution discrepancy</b> (ΔD)
+                  from real vs. fake token usage statistics.</li>
+                <li><b>D³AT Transformer:</b> Its core <b>Discrepancy-Aware Self-Attention</b> (D³ASA) module processes
+                  the quantization error, guided by global ΔD.</li>
+                <li><b>Semantic Feature Fusion:</b> A frozen <b>CLIP</b> extracts semantic features, which are fused
+                  with the D³AT's output for final classification.</li>
               </ol>
-            </div>
-
-            <h4 class="title is-5 mt-5">Dataset Visualization (ARForensics)</h4>
-            <div class="content has-text-centered">
-              <p>
-                The <b>ARForensics</b> dataset contains samples from 7 mainstream AR models (LlamaGen, VAR, Infinity,
-                Janus-Pro, RAR, Switti, Open-MAGVIT2), serving as a robust visual benchmark for generalization testing.
-              </p>
             </div>
           </div>
         </div>
@@ -413,46 +407,30 @@
     </section>
 
     <hr>
+
+
     <section class="hero is-small">
       <div class="hero-body">
         <div class="container">
           <h2 class="title is-3">Dataset Visualization</h2>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/ar_forensics_real_vs_fake.jpg" alt="Visualization of ARForensics Dataset Samples"
-                loading="lazy" />
-              <h2 class="subtitle has-text-centered">
-                A selection of real and generated images from the ARForensics dataset, covering 7 mainstream AR models.
-              </h2>
-            </div>
-            <div class="item">
-              <img src="static/images/token_distribution_bias.jpg" alt="Token Distribution Bias Visualization"
-                loading="lazy" />
-              <h2 class="subtitle has-text-centered">
-                Figure 1: Token Distribution Bias. Real data shows a long-tail distribution, while fakes show
-                concentrated high-frequency token usage, which is key to D³QE.
-              </h2>
-            </div>
-            <div class="item">
-              <img src="static/images/codebook_activation_difference.jpg" alt="Codebook Activation Difference Heatmaps"
-                loading="lazy" />
-              <h2 class="subtitle has-text-centered">
-                Figure 2: Codebook Activation Difference Heatmaps. Real samples (a) show a balanced codebook usage,
-                while fakes (b) reveal polarized hotspots, highlighting the core artifact for detection.
-              </h2>
-            </div>
-            <div class="item">
-              <img src="static/images/d3qe_performance_graph.jpg" alt="D³QE Performance Comparison Graph"
-                loading="lazy" />
-              <h2 class="subtitle has-text-centered">
-                Performance comparison showing D³QE's superior mean Average Precision (A.P.) over state-of-the-art
-                methods.
-              </h2>
+          <div class="content has-text-centered">
+            <p>
+              The <b>ARForensics</b> dataset contains samples from 7 mainstream AR models (LlamaGen, VAR, Infinity,
+              Janus-Pro, RAR, Switti, Open-MAGVIT2), serving as a robust visual benchmark for generalization testing.
+            </p>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="publication-video">
+                <iframe src="static/videos/data.mp4" frameborder="0" allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <hr>
     <section class="section hero is-light">
       <div class="container is-max-desktop">
